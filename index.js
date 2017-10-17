@@ -80,7 +80,7 @@ function translate(key, params = {}) {
 
         // If there's no key
         if (!key) {
-            reject(`Could not find the key '${key}' in the translation file. Make sure a key with that name exists.`);
+            reject(`Looks like it's a no '${key}'`);
         }
 
         // If the 'key' is cached
@@ -91,7 +91,15 @@ function translate(key, params = {}) {
 
         // If there's a 'json' defined
         if (json) {
+            const keyValue = getKeyValue(key, json);
+
+            if (!keyValue) {
+                reject(`Could not find the key '${key}' in the translation file. Make sure a key with that name exists.`);
+                return;
+            }
+
             resolve(compile(getKeyValue(key, json), params));
+
             return;
         }
 
@@ -177,7 +185,7 @@ function setConfig({ pathPrefix, locale, fallbackLocale, extension, silent }) {
         pathPrefix,
         locale,
         fallbackLocale,
-        extension: extension && parseExtension(extension) || '.json',
+        extension: (extension && parseExtension(extension)) || '.json',
         silent: silent || false
     };
 
@@ -185,10 +193,17 @@ function setConfig({ pathPrefix, locale, fallbackLocale, extension, silent }) {
     loadLocale();
 }
 
-export {
-    translate,
-    setConfig
+/**
+ * Set the json data directly
+ * @param {object} data
+ */
+function setJson(data) {
+    json = data;
+    consumeSubscribers();
 }
 
-// Export the TranslateComponent
-export * from './src/translate-component';
+export {
+    translate,
+    setConfig,
+    setJson
+}

@@ -10,9 +10,60 @@
     "README.md"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nyc ava",
+    "test-watch": "ava --watch",
+    "test-reporter-html": "nyc --reporter=html ava"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "babel": {
+    "plugins": [
+      "babel-plugin-transform-object-rest-spread"
+    ],
+    "presets": [
+      "env"
+    ]
+  },
+  "ava": {
+    "files": [
+      "tests/*.js",
+      "!tests/utilities/*"
+    ],
+    "source": [
+      "index.js"
+    ],
+    "color": true,
+    "concurrency": 5,
+    "failFast": true,
+    "failWithoutAssertions": false,
+    "tap": true,
+    "powerAssert": true,
+    "require": [
+      "babel-register"
+    ],
+    "babel": {
+      "plugins": [
+        "babel-plugin-transform-object-rest-spread"
+      ],
+      "presets": [
+        "env"
+      ]
+    }
+  },
+  "nyc": {
+    "exclude": [
+      "tests/*.*",
+      "tests/**/*.*"
+    ]
+  },
+  "devDependencies": {
+    "ava": "^0.22.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-register": "^6.26.0",
+    "nyc": "^11.2.1"
+  }
 }
