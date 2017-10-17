@@ -189,3 +189,6 @@ export {
     translate,
     setConfig
 }
+
+// Export the TranslateComponent
+export * from './src/translate-component';

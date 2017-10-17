@@ -1,5 +1,5 @@
 import { translate } from '../index';
-import { Component } from 'react';
+import React, { Component } from 'react';
 
 export class TranslateComponent extends Component {
 
@@ -13,6 +13,9 @@ export class TranslateComponent extends Component {
         this.setTranslatedValue();
     }
 
+    /**
+     * Requests the translate value, and the sets the state
+     */
     setTranslatedValue() {
         let { label, params } = this.props;
 
@@ -27,9 +30,12 @@ export class TranslateComponent extends Component {
     }
 
     render() {
-        return (
-            <span>{this.state.text}</span>
-        )
+        // If there's a render-prop
+        if (this.props.render) {
+            return this.props.render(this.state.text);
+        }
+
+        return <span>{this.state.text}</span>
     }
 
 }
