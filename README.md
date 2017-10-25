@@ -6,6 +6,13 @@ Easy translations for your react apps.
 Overview
 --------
 
+### Instalation
+```js
+npm install --save react-translate-json
+# or
+yarn add react-translate-json
+```
+
 ### Getting started
 Just think of it in these steps:
 
