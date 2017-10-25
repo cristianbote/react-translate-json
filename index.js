@@ -207,3 +207,5 @@ export {
     setConfig,
     setJson
 }
+
+export { TranslateComponent } from './translate-component';

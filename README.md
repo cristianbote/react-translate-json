@@ -1,11 +1,17 @@
+React Translate Json
+==========
+
 Easy translations for your react apps.
 
-### Getting started is pretty easy.
+Overview
+--------
+
+### Getting started
 Just think of it in these steps:
 
 1. Define your translation directory
-1. Define the current user locale code, e.g. 'en', 'de', 'fr' and so on.
-1. Optionally use a fallback language code. Usually 'en'.
+1. Define the current user locale code, e.g. `'en'`, `'de'`, `'fr'` and so on.
+1. Optionally use a fallback language code. Usually `'en'`.
 
 Then, use the thin, built-in component, to translate your strings.
 

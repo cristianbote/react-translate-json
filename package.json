@@ -22,7 +22,8 @@
       "babel-plugin-transform-object-rest-spread"
     ],
     "presets": [
-      "env"
+      "env",
+      "react"
     ]
   },
   "ava": {
@@ -47,7 +48,8 @@
         "babel-plugin-transform-object-rest-spread"
       ],
       "presets": [
-        "env"
+        "env",
+        "react"
       ]
     }
   },
@@ -63,7 +65,13 @@
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
     "babel-register": "^6.26.0",
-    "nyc": "^11.2.1"
+    "enzyme": "^3.1.0",
+    "enzyme-adapter-react-16": "^1.0.2",
+    "nyc": "^11.2.1",
+    "react": "^16.0.0",
+    "react-addons-test-utils": "^15.6.2",
+    "react-dom": "^16.0.0"
   }
 }
