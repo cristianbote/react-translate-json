@@ -1,7 +1,5 @@
-React Translate Json
-==========
-
-Easy translations for your react apps.
+Make react speak your language.
+=
 
 [![npm version](https://badge.fury.io/js/react-translate-json.svg)](https://badge.fury.io/js/react-translate-json) [![Build Status](https://travis-ci.org/cristianbote/react-translate-json.svg?branch=master)](https://travis-ci.org/cristianbote/react-translate-json)
 

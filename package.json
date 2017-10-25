@@ -10,9 +10,8 @@
     "README.md"
   ],
   "scripts": {
-    "test": "nyc ava",
-    "test-watch": "ava --watch",
-    "test-reporter-html": "nyc --reporter=html ava"
+    "test": "nyc --reporter=lcov ava",
+    "test-watch": "ava --watch"
   },
   "keywords": [
     "react",
