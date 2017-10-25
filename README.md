@@ -3,11 +3,13 @@ React Translate Json
 
 Easy translations for your react apps.
 
+[![npm version](https://badge.fury.io/js/react-translate-json.svg)](https://badge.fury.io/js/react-translate-json) [![Build Status](https://travis-ci.org/cristianbote/react-translate-json.svg?branch=master)](https://travis-ci.org/cristianbote/react-translate-json)
+
 Overview
 --------
 
 ### Instalation
-```js
+```
 npm install --save react-translate-json
 # or
 yarn add react-translate-json
