@@ -14,8 +14,15 @@
     "test-watch": "ava --watch",
     "test-reporter-html": "nyc --reporter=html ava"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "react",
+    "translate",
+    "json",
+    "react-translate",
+    "react-translate-json",
+    "translate-json"
+  ],
+  "author": "Cristian Bote <me@cristianbote.ro>",
   "license": "ISC",
   "babel": {
     "plugins": [
@@ -73,5 +80,6 @@
     "react": "^16.0.0",
     "react-addons-test-utils": "^15.6.2",
     "react-dom": "^16.0.0"
-  }
+  },
+  "repository": "git@github.com:cristianbote/react-translate-json.git"
 }
