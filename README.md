@@ -54,7 +54,7 @@ Now, you can easily add in your translations by importing the component.
 ```js
 // App.js
 import React, { Component } from 'react';
-import { TranslateComponent } from './lib';
+import { TranslateComponent } from 'react-translate-json';
 
 class App extends Component {
   render() {
@@ -63,15 +63,15 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           
-          {/* Regular component usage */}
-          <h1 className="App-title">
-              <TranslateComponent label="HELLO" params={{user: 'John'}}/>
-          </h1>
-
           {/* Render-prop based */}
-          <TranslateComponent label="HELLO" params={{user: 'John'}} render={(res) => (
+          <TranslateComponent label="PAGES.HOME.TITLE" render={(res) => (
             <h1 className="App-title">{res}</h1>
           )}/>
+          
+          {/* Regular component usage */}
+          <h2 className="greet">
+              <TranslateComponent label="HELLO" params={{user: 'John'}}/>
+          </h2>
 
         </header>
         <p className="App-intro">
