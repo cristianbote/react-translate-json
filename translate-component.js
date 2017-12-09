@@ -10,7 +10,7 @@ export class TranslateComponent extends Component {
             text: ''
         };
 
-        this.setTranslatedValue();
+        this.setTranslatedValue(props);
     }
 
     /**
@@ -23,7 +23,7 @@ export class TranslateComponent extends Component {
             .then(text => {
                 return new Promise(resolve => {
                     this.setState({ text }, resolve);
-                })
+                });
             });
     }
 

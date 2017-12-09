@@ -44,18 +44,23 @@ The following examples are based on `create-react-app` results.
 import React from 'react';
 import ReactDOM from 'react-dom';
 // Import the setConfig function to provide the service with your settings
-import { setConfig } from 'react-translate-json';
+import { TranslateProvider } from 'react-translate-json';
 import App from './App';
 
-setConfig({
+const translationOptions = {
     pathPrefix: '/translations', // Path to your translations
     locale: 'en', // User current locale
     fallbackLocale: 'en' // Fallback locale
-});
+};
 
 // That's it! You are all set!
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+    <TranslateProvider {...translationOptions}>
+        <App />
+    </TranslateProvider>,
+    document.getElementById('root')
+);
 ```
 
 Now, you can easily add in your translations by importing the component.

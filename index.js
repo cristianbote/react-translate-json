@@ -208,4 +208,13 @@ export {
     setJson
 }
 
+export const TranslateProvider = ({ pathPrefix, locale, fallbackLocale, extension, silent, data, children }) => {
+    if (data) {
+        setJson(data)
+    } else {
+        setConfig({ pathPrefix, locale, fallbackLocale, extension, silent });
+    }
+    return children;
+};
+
 export { TranslateComponent } from './translate-component';

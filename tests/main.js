@@ -1,6 +1,6 @@
 import path from 'path';
-import test from 'ava';
 import './utilities/fetchify';
+import test from 'ava';
 import is from './utilities/is';
 import { setConfig, setJson, translate } from '../index';
 
