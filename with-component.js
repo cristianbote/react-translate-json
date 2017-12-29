@@ -21,9 +21,7 @@ export const withComponent = (Component, framework) => (
 
             return translate(label, params || null)
                 .then(text => {
-                    return new Promise(resolve => {
-                        this.setState({ text }, resolve);
-                    });
+                    this.setState({ text });
                 });
         }
 
