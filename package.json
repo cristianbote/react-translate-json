@@ -1,7 +1,7 @@
 {
   "name": "react-translate-json",
   "version": "1.3.0",
-  "description": "",
+  "description": "Make react or preact speak your language",
   "main": "index.js",
   "files": [
     "index.js",
@@ -15,10 +15,13 @@
   },
   "keywords": [
     "react",
+    "preact",
     "translate",
     "json",
     "react-translate",
     "react-translate-json",
+    "preact-translate",
+    "preact-translate-json",
     "translate-json"
   ],
   "author": "Cristian Bote <me@cristianbote.ro>",

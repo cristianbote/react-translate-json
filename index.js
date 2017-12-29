@@ -214,7 +214,5 @@ export const TranslateProvider = ({ pathPrefix, locale, fallbackLocale, extensio
     } else {
         setConfig({ pathPrefix, locale, fallbackLocale, extension, silent });
     }
-    return children;
+    return children && children[0];
 };
-
-export { TranslateComponent } from './translate-component';

@@ -4,3 +4,4 @@ sandbox
 coverage
 .nyc_output
 package-lock.json
+.DS_Store
