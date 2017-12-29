@@ -43,7 +43,7 @@ The following examples are based on `create-react-app` results.
 // This is usually our index.js
 import React from 'react';
 import ReactDOM from 'react-dom';
-// Import the setConfig function to provide the service with your settings
+// Import the TranslateProvider function to provide the service with your settings
 import { TranslateProvider } from 'react-translate-json';
 import App from './App';
 
