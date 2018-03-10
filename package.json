@@ -1,6 +1,6 @@
 {
   "name": "react-translate-json",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Make react or preact speak your language",
   "main": "index.js",
   "files": [
