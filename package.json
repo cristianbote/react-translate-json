@@ -5,7 +5,9 @@
   "main": "index.js",
   "files": [
     "index.js",
-    "src/translate-component.js",
+    "preact.js",
+    "react.js",
+    "with-component.js",
     "package.json",
     "README.md"
   ],
