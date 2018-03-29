@@ -202,6 +202,29 @@ function setJson(data) {
     consumeSubscribers();
 }
 
+/**
+ * Here we're checking to see if we can render the damn children. Basically, react can render an array, preact can't. Yet!
+ * @param {array} children
+ * @returns {array|object}
+ */
+function renderChildren(children) {
+    const hasLength = !isNaN(children.length);
+    const len = children.length;
+
+    // Basically, preact can't handle the list to render
+    // so just return the first one
+    if (hasLength && len > 1) {
+        if (children[0].hasOwnProperty('nodeName')) {
+            console.warn('[react-translate-json] Warning! TranslateProvider received more than one item to render and you are using preact');
+            return children[0];
+        }
+    } else if (len === 1) {
+        return children[0];
+    }
+
+    return children;
+}
+
 export {
     translate,
     setConfig,
@@ -210,9 +233,10 @@ export {
 
 export const TranslateProvider = ({ pathPrefix, locale, fallbackLocale, extension, silent, data, children }) => {
     if (data) {
-        setJson(data)
+        setJson(data);
     } else {
         setConfig({ pathPrefix, locale, fallbackLocale, extension, silent });
     }
-    return children && children[0];
+
+    return children && renderChildren(children);
 };
